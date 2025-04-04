@@ -276,7 +276,7 @@ RUN if test "${GDAL_VERSION}" = "master"; then \
             /build/usr/share/gdal/*.svg \
             # unused
             /build/usr/share/gdal/*.png \
-       ;do rm $i; done)
+       ;do rm -f $i; done)
 
 # Build final image
 FROM alpine:${ALPINE_VERSION} as runner
